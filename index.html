@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBrawl</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="/images/shorcutIcon.png">
+</head>
+
+<body>
+    <!-- GAME CONTAINER -->
+    <div class="container" id="gameViewport">
+        <div class="container-life">
+            <div class="containerPk1">
+                <div id="lifePk1" class="progress-bar" data-label="" style="--life1 : 100"></div>
+                <div id="atkPk1" class="progress-bar-atk" data-label="" style="--atks1 : 0"></div>
+                <h2 id="namePk1"></h2>
+            </div>
+            <div class="containerPk2">
+                <div id="lifePk2" class="progress-bar" data-label="" style="--life2 : 100"></div>
+                <div id="atkPk2" class="progress-bar-atk" data-label="" style="--atks2 : 0"></div>
+                <h2 id="namePk2"></h2>
+            </div>
+        </div>
+        <div class="floor-game">
+            <div class="pk1">
+                <div id="pokemon1">
+                    <h2 class="headPlayer">1P</h2>
+                    <img src="/images/ulti.png" id="ulti1">
+                </div>
+            </div>
+            <div class="pk2">
+                <div id="pokemon2">
+                    <h2 class="headPlayer">2P</h2>
+                    <img src="/images/ulti.png" id="ulti2">
+                </div>
+            </div>
+        </div>
+        <div class="time-container">
+            <h2 id="timer"></h2>
+        </div>
+
+        <div class="cont-nav">
+            <nav class="nav-main">
+                <ul class="nav-ul">
+                    <li id="gameBtn">Game</li>
+                    <li id="infBtn">Info</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SELECT POKEMON CONTAINER -->
+    <div id="selectContainer">
+        <div class="inf-section">
+            <h2>PokeBrawl</h2>
+            <ul>
+                <li>
+                    <p>Player 1</p>
+                </li>
+                <li>
+                    <p>Player 2</p>
+                </li>
+            </ul>
+            <div class="choose-pk-area">
+                <ul class="list-pk">
+                    <li>
+                        <label for="charizard1">
+                            <input type="radio" name="pokemon1" id="charizard1" checked>
+                            <img src="./images/charizardLeft.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="venusaur1">
+                            <input type="radio" name="pokemon1" id="venusaur1">
+                            <img src="./images/venusaurLeft.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="blastoise1">
+                            <input type="radio" name="pokemon1" id="blastoise1">
+                            <img src="./images/blastoiseLeft.png">
+                        </label>
+                    </li>
+                </ul>
+
+                <ul class="list-pk">
+                    <li>
+                        <label for="charizard2">
+                            <input type="radio" name="pokemon2" id="charizard2" checked>
+                            <img src="./images/charizardRight.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="venusaur2">
+                            <input type="radio" name="pokemon2" id="venusaur2">
+                            <img src="./images/venusaurRight.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="blastoise2">
+                            <input type="radio" name="pokemon2" id="blastoise2">
+                            <img src="./images/blastoiseRight.png">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="choose-pk-area">
+                <ul class="list-pk">
+                    <li>
+                        <label for="typhlosion1">
+                            <input type="radio" name="pokemon1" id="typhlosion1">
+                            <img src="./images/typhlosionLeft.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="meganium1">
+                            <input type="radio" name="pokemon1" id="meganium1">
+                            <img src="./images/meganiumLeft.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="feraligatr1">
+                            <input type="radio" name="pokemon1" id="feraligatr1">
+                            <img src="./images/feraligatrLeft.png">
+                        </label>
+                    </li>
+                </ul>
+                
+                <ul class="list-pk">
+                    <li>
+                        <label for="typhlosion2">
+                            <input type="radio" name="pokemon2" id="typhlosion2">
+                            <img src="./images/typhlosionRight.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="meganium2">
+                            <input type="radio" name="pokemon2" id="meganium2">
+                            <img src="./images/meganiumRight.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="feraligatr2">
+                            <input type="radio" name="pokemon2" id="feraligatr2">
+                            <img src="./images/feraligatrRight.png">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="playBtn" class="playBtn">
+            <p>Play</p>
+        </button>
+    </div>
+
+    <!-- FLOAT INFO CONTAINER -->
+    <div id="infContainer">
+        <button id="closeInfBtn">
+            <p>+</p>
+        </button>
+        <div class="inf-section" id="info">
+            <h2>About PokeBrawl:</h2>
+            <p>Started at june 2022, completely maked by AquaGD</p>
+            <p>*Images and others has CC license</p>
+            <img src="/images/info.png">
+        </div>
+    </div>
+
+    <!-- WINNER CONTAINER -->
+    <div id="winnerContainer">
+        <div class="inf-section">
+            <h2 id="txtWinner">PLAYER 1 WIN!</h2>
+            <div class="choose-pk-area">
+                <ul class="list-pk">
+                    <li>
+                        <img id="imgWinnerPk" src="./images/charizardLeft.png">
+                        <p id="nameWinnerPk">PLAYER 1</p>
+                </ul>
+                <ul class="list-pk">
+                    <li>
+                        <img id="imgLooserPk" src="./images/charizardRight.png">
+                        <p id="nameLooserPk">PLAYER 2</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cont-draw">
+            <img id="imgDraw" src="/images/draw.png" alt="" srcset="">
+        </div>
+        <button id="playAgainBtn" class="playBtn">
+            <p>Play Again</p>
+        </button>
+    </div>
+    <script src="./scripts/imports-config.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
